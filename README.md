@@ -1,5 +1,5 @@
 ## QVSource Google Webmaster Tools Starter App
-A template application showing how to get started using the [QVSource Google Webmaster Tools Connector For QlikView And Qlik Sense](TODO).
+A template application showing how to get started using the [QVSource Google Webmaster Tools Connector For QlikView And Qlik Sense](http://wiki.qvsource.com/Google-Webmaster-Tools-Connector-For-QlikView-And-Qlik-Sense.ashx).
 
 **QlikView Users**: You can simply click the ["Download ZIP"](https://github.com/QVSource/QVSource-Google-Webmaster-Tools-Starter-App/archive/master.zip) button on GitHub to grab this application.
 
