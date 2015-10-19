@@ -81,6 +81,18 @@ SUB getStats
 		FROM
 			[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=page%2cquery&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
 		(qvx);
+		
+		ByPage:
+		LOAD
+			'$(site_url)' as ByPageSite_url,
+		    dimension_page as ByPageDimension_page,
+		    clicks as ByPageClicks,
+		    impressions as ByPageImpressions,
+		    ctr as ByPageCtr,
+		    position as ByPagePosition
+		FROM
+			[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=page&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
+		(qvx);
 	
 	NEXT
 
