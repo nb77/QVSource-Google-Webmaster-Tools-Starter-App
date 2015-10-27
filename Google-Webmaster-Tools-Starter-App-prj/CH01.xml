@@ -2064,12 +2064,10 @@
     <TruncateLabel>true</TruncateLabel>
     <ScaleChartSizeRects></ScaleChartSizeRects>
     <FastChangeRefSizeRect></FastChangeRefSizeRect>
-    <PieChartSectorOutlineColor></PieChartSectorOutlineColor>
   </ChartProperties>
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>300</int>
       <int>525</int>
     </ColWidths>
     <Striping>
