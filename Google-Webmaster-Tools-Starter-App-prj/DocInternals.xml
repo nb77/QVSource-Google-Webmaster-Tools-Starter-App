@@ -7,6 +7,7 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
+    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
@@ -17,13 +18,13 @@
     <String>ListSites</String>
     <String>8</String>
     <String>1</String>
-    <String>ByCountryAndDevice</String>
+    <String>Site</String>
     <String>9</String>
     <String>1</String>
-    <String>ByCountryAndDevice</String>
+    <String>Site</String>
     <String>10</String>
     <String>1</String>
-    <String>ByCountryAndDevice</String>
+    <String>Site</String>
     <String>11</String>
     <String>1</String>
     <String>ByCountryAndDevice</String>
@@ -38,13 +39,13 @@
     <String>ByCountryAndDevice</String>
     <String>15</String>
     <String>1</String>
-    <String>ByPageAndQuery</String>
+    <String>ByCountryAndDevice</String>
     <String>16</String>
     <String>1</String>
-    <String>ByPageAndQuery</String>
+    <String>ByCountryAndDevice</String>
     <String>17</String>
     <String>1</String>
-    <String>ByPageAndQuery</String>
+    <String>ByCountryAndDevice</String>
     <String>18</String>
     <String>1</String>
     <String>ByPageAndQuery</String>
@@ -59,13 +60,13 @@
     <String>ByPageAndQuery</String>
     <String>22</String>
     <String>1</String>
-    <String>ByPage</String>
+    <String>ByPageAndQuery</String>
     <String>23</String>
     <String>1</String>
-    <String>ByPage</String>
+    <String>ByPageAndQuery</String>
     <String>24</String>
     <String>1</String>
-    <String>ByPage</String>
+    <String>ByPageAndQuery</String>
     <String>25</String>
     <String>1</String>
     <String>ByPage</String>
@@ -75,8 +76,75 @@
     <String>27</String>
     <String>1</String>
     <String>ByPage</String>
+    <String>28</String>
+    <String>1</String>
+    <String>ByPage</String>
+    <String>29</String>
+    <String>1</String>
+    <String>ByPage</String>
+    <String>30</String>
+    <String>1</String>
+    <String>ByPage</String>
   </FieldSrcTables>
-  <TableViewData></TableViewData>
+  <TableViewData>
+    <Pos></Pos>
+    <CtlInfo>
+      <InternalView>
+        <Tables>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>315</Left>
+              <Top>107</Top>
+              <Width>212</Width>
+              <Height>64</Height>
+            </Pos>
+            <Caption>ListSites</Caption>
+          </TableViewTableWinSaveInfo>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>315</Left>
+              <Top>211</Top>
+              <Width>214</Width>
+              <Height>82</Height>
+            </Pos>
+            <Caption>Site</Caption>
+          </TableViewTableWinSaveInfo>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>574</Left>
+              <Top>106</Top>
+              <Width>297</Width>
+              <Height>154</Height>
+            </Pos>
+            <Caption>ByCountryAndDevice</Caption>
+          </TableViewTableWinSaveInfo>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>579</Left>
+              <Top>272</Top>
+              <Width>276</Width>
+              <Height>154</Height>
+            </Pos>
+            <Caption>ByPageAndQuery</Caption>
+          </TableViewTableWinSaveInfo>
+          <TableViewTableWinSaveInfo>
+            <Pos>
+              <Left>582</Left>
+              <Top>439</Top>
+              <Width>226</Width>
+              <Height>136</Height>
+            </Pos>
+            <Caption>ByPage</Caption>
+          </TableViewTableWinSaveInfo>
+        </Tables>
+        <BroomPoints></BroomPoints>
+        <ConnectionPoints></ConnectionPoints>
+        <ZoomFactor>3FF0000000000000</ZoomFactor>
+      </InternalView>
+      <SourceView></SourceView>
+    </CtlInfo>
+    <Mode>0</Mode>
+  </TableViewData>
   <Bookmarks></Bookmarks>
   <SavedByVersion>11.20.12742.0409</SavedByVersion>
   <ForceBackEndMacroExecution>false</ForceBackEndMacroExecution>
@@ -119,6 +187,9 @@
           <String>$Info</String>
           <String>ListSitesSiteUrl</String>
           <String>ListSitesPermissionLevel</String>
+          <String>SitesiteUrl</String>
+          <String>SitepermissionLevel</String>
+          <String>Sitestatus</String>
           <String>ByCountryAndDeviceSite_url</String>
           <String>ByCountryAndDeviceDimension_country</String>
           <String>ByCountryAndDeviceDimension_device</String>
@@ -137,6 +208,9 @@
           <String>$Info</String>
           <String>ListSitesSiteUrl</String>
           <String>ListSitesPermissionLevel</String>
+          <String>SitesiteUrl</String>
+          <String>SitepermissionLevel</String>
+          <String>Sitestatus</String>
           <String>ByCountryAndDeviceSite_url</String>
           <String>ByCountryAndDeviceDimension_country</String>
           <String>ByCountryAndDeviceDimension_device</String>

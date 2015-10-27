@@ -51,43 +51,60 @@ SUB getStats
 
 		LET site_url = peek('ListSitesSiteUrl', $(i), 'ListSites');
 		
-		ByCountryAndDevice:
+		// Check the site is accessible
+		Site:
 		LOAD
-			'$(site_url)' as ByCountryAndDeviceSite_url,
-	    	dimension_country as ByCountryAndDeviceDimension_country,
-		    dimension_device as ByCountryAndDeviceDimension_device,
-		    clicks as ByCountryAndDeviceClicks,
-		    impressions as ByCountryAndDeviceImpressions,
-		    ctr as ByCountryAndDeviceCtr,
-		    position as ByCountryAndDevicePosition
+		    siteUrl as SitesiteUrl,
+		    permissionLevel as SitepermissionLevel,
+		    status as Sitestatus
 		FROM
-			[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=country%2cdevice&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
+			[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=Site&siteUrl=$(site_url)&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
 		(qvx);
 		
-		ByPageAndQuery:
-		LOAD
-			'$(site_url)' as ByPageAndQuerySite_url,
-		    dimension_page as ByPageAndQueryDimension_page,
-		    dimension_query as ByPageAndQueryDimension_query,
-		    clicks as ByPageAndQueryClicks,
-		    impressions as ByPageAndQueryImpressions,
-		    ctr as ByPageAndQueryCtr,
-		    position as ByPageAndQueryPosition
-		FROM
-			[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=page%2cquery&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
-		(qvx);
+		// There should be exactly 1 row
+		LET status = peek('Sitestatus', 0, 'Site');
 		
-		ByPage:
-		LOAD
-			'$(site_url)' as ByPageSite_url,
-		    dimension_page as ByPageDimension_page,
-		    clicks as ByPageClicks,
-		    impressions as ByPageImpressions,
-		    ctr as ByPageCtr,
-		    position as ByPagePosition
-		FROM
-			[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=page&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
-		(qvx);
+		IF status='OK' THEN
+		
+			ByCountryAndDevice:
+			LOAD
+				'$(site_url)' as ByCountryAndDeviceSite_url,
+		    	dimension_country as ByCountryAndDeviceDimension_country,
+			    dimension_device as ByCountryAndDeviceDimension_device,
+			    clicks as ByCountryAndDeviceClicks,
+			    impressions as ByCountryAndDeviceImpressions,
+			    ctr as ByCountryAndDeviceCtr,
+			    position as ByCountryAndDevicePosition
+			FROM
+				[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=country%2cdevice&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
+			(qvx);
+			
+			ByPageAndQuery:
+			LOAD
+				'$(site_url)' as ByPageAndQuerySite_url,
+			    dimension_page as ByPageAndQueryDimension_page,
+			    dimension_query as ByPageAndQueryDimension_query,
+			    clicks as ByPageAndQueryClicks,
+			    impressions as ByPageAndQueryImpressions,
+			    ctr as ByPageAndQueryCtr,
+			    position as ByPageAndQueryPosition
+			FROM
+				[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=page%2cquery&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
+			(qvx);
+			
+			ByPage:
+			LOAD
+				'$(site_url)' as ByPageSite_url,
+			    dimension_page as ByPageDimension_page,
+			    clicks as ByPageClicks,
+			    impressions as ByPageImpressions,
+			    ctr as ByPageCtr,
+			    position as ByPagePosition
+			FROM
+				[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=SearchAnalyticsQuery&siteUrl=$(site_url)&startDate=01-01-2015&endDate=13-10-2015&dimensions=page&rowLimit=1000&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
+			(qvx);
+		
+		ENDIF
 	
 	NEXT
 
