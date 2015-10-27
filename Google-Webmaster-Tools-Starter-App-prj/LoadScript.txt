@@ -1,7 +1,7 @@
 ﻿///$tab Change Log
 /*
 
-0.0.8 - 13/10/15
+0.0.8 - 19/10/15
 ----------------
 * Initial version.
 
@@ -18,21 +18,16 @@ SET TimestampFormat='DD/MM/YYYY hh:mm:ss[.fff]';
 SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
 SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
 
+// You can set this to your own app name.
+LET vQVSourceAppId = 'Google_Webmaster_Tools_Demo_App';
+	
+// This could be updated to point to a different server / port.
+LET vBaseUrl = 'http://localhost:5555';
+
+// This could be &loadAccessToken=1a2b3c4d for QVSource web edition.
+LET vLoadAccessToken = '';
 ///$tab ListSites
-SUB listSites
-
-	// START SETUP
-	
-	// You can set this to your own app name.
-	LET vQVSourceAppId = 'Google_Webmaster_Tools_Demo_App';
-	
-	// This could be updated to point to a different server / port.
-	LET vBaseUrl = 'http://localhost:5555';
-	
-	// This could be &loadAccessToken=1a2b3c4d for QVSource web edition.
-	LET vLoadAccessToken = '';
-
-	// END SETUP
+SUB listSites	
 
 	TRACE 'Listing sites...';
 	

@@ -613,7 +613,7 @@
           <Alpha>255</Alpha>
         </TestTubeColor>
       </GaugeSettings>
-      <ColWidth>788</ColWidth>
+      <ColWidth>544</ColWidth>
       <ShowAsPopup>false</ShowAsPopup>
       <Searchable>false</Searchable>
       <LineMode>LINEMODE_STRAIGHT</LineMode>
@@ -2071,8 +2071,8 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>1050</int>
-      <int>788</int>
+      <int>1316</int>
+      <int>544</int>
     </ColWidths>
     <Striping>
       <int>1</int>
