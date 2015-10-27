@@ -2260,18 +2260,16 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>ByCountryAndDeviceSite_url</Name>
+        <Name>SiteUrl</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
-      <Title>
-        <v>Url</v>
-      </Title>
+      <Title></Title>
       <TotalString></TotalString>
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>0</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
+        <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
@@ -2418,7 +2416,7 @@
       <PageBreaks>NO_BREAKS</PageBreaks>
       <MaxNumShown></MaxNumShown>
       <Spacing></Spacing>
-      <ColWidth>634</ColWidth>
+      <ColWidth>619</ColWidth>
       <OverrideGroupSort>false</OverrideGroupSort>
       <Show></Show>
       <EnableCondition></EnableCondition>
@@ -4160,7 +4158,7 @@
   <TableProperties>
     <VerticalLabels>false</VerticalLabels>
     <ColWidths>
-      <int>634</int>
+      <int>300</int>
       <int>300</int>
       <int>300</int>
       <int>300</int>
@@ -4661,13 +4659,13 @@
     </DefaultExprCellVariations>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
-      <int>6</int>
       <int>3</int>
-      <int>0</int>
+      <int>1</int>
+      <int>6</int>
       <int>5</int>
       <int>4</int>
-      <int>1</int>
       <int>2</int>
+      <int>0</int>
     </InterFieldSortOrder>
     <ExpressionPosition>3</ExpressionPosition>
     <NumberOfLeftDimensions>3</NumberOfLeftDimensions>
@@ -4716,7 +4714,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>ByCountryAndDeviceSite_url</DimName>
+          <DimName>SiteUrl</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>

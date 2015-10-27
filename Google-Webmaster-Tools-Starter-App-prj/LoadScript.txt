@@ -33,7 +33,7 @@ SUB listSites
 	
 	ListSites:
 	LOAD
-    	siteUrl as ListSitesSiteUrl,
+    	siteUrl as SiteUrl,
 	    permissionLevel as ListSitesPermissionLevel
 	FROM
 		[$(vBaseUrl)/QVSource/GoogleWebmasterToolsConnector/?table=ListSites&appId=$(vQVSourceAppId)$(vLoadAccessToken)]
@@ -49,12 +49,12 @@ SUB getStats
 	
 	FOR i=0 to $(noRows)-1
 
-		LET site_url = peek('ListSitesSiteUrl', $(i), 'ListSites');
+		LET site_url = peek('SiteUrl', $(i), 'ListSites');
 		
 		// Check the site is accessible
 		Site:
 		LOAD
-		    siteUrl as SitesiteUrl,
+		    siteUrl as SiteUrl,
 		    permissionLevel as SitepermissionLevel,
 		    status as Sitestatus
 		FROM
@@ -68,7 +68,7 @@ SUB getStats
 		
 			ByCountryAndDevice:
 			LOAD
-				'$(site_url)' as ByCountryAndDeviceSite_url,
+				'$(site_url)' as SiteUrl,
 		    	dimension_country as ByCountryAndDeviceDimension_country,
 			    dimension_device as ByCountryAndDeviceDimension_device,
 			    clicks as ByCountryAndDeviceClicks,
@@ -81,7 +81,7 @@ SUB getStats
 			
 			ByPageAndQuery:
 			LOAD
-				'$(site_url)' as ByPageAndQuerySite_url,
+				'$(site_url)' as SiteUrl,
 			    dimension_page as ByPageAndQueryDimension_page,
 			    dimension_query as ByPageAndQueryDimension_query,
 			    clicks as ByPageAndQueryClicks,
@@ -94,7 +94,7 @@ SUB getStats
 			
 			ByPage:
 			LOAD
-				'$(site_url)' as ByPageSite_url,
+				'$(site_url)' as SiteUrl,
 			    dimension_page as ByPageDimension_page,
 			    clicks as ByPageClicks,
 			    impressions as ByPageImpressions,

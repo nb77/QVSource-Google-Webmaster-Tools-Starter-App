@@ -249,7 +249,7 @@
     <CellBorders>false</CellBorders>
   </Layout>
   <Def>
-    <Name>ByCountryAndDeviceSite_url</Name>
+    <Name>SiteUrl</Name>
     <Type>PRESENT</Type>
   </Def>
   <Title>
@@ -348,7 +348,7 @@
     <SortByState>1</SortByState>
     <SortByFrequency>0</SortByFrequency>
     <SortByNumeric>0</SortByNumeric>
-    <SortByAscii>0</SortByAscii>
+    <SortByAscii>1</SortByAscii>
     <SortByLoadOrder>0</SortByLoadOrder>
     <SortByExpression>0</SortByExpression>
     <Expression></Expression>
