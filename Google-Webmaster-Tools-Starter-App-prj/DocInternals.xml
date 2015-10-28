@@ -7,13 +7,11 @@
     <bool>false</bool>
     <bool>false</bool>
     <bool>false</bool>
-    <bool>false</bool>
   </AlwaysLoose>
   <FieldSrcTables>
     <String>6</String>
-    <String>5</String>
+    <String>4</String>
     <String>ListSites</String>
-    <String>Site</String>
     <String>ByCountryAndDevice</String>
     <String>ByPageAndQuery</String>
     <String>ByPage</String>
@@ -22,10 +20,10 @@
     <String>ListSites</String>
     <String>8</String>
     <String>1</String>
-    <String>Site</String>
+    <String>ByCountryAndDevice</String>
     <String>9</String>
     <String>1</String>
-    <String>Site</String>
+    <String>ByCountryAndDevice</String>
     <String>10</String>
     <String>1</String>
     <String>ByCountryAndDevice</String>
@@ -40,10 +38,10 @@
     <String>ByCountryAndDevice</String>
     <String>14</String>
     <String>1</String>
-    <String>ByCountryAndDevice</String>
+    <String>ByPageAndQuery</String>
     <String>15</String>
     <String>1</String>
-    <String>ByCountryAndDevice</String>
+    <String>ByPageAndQuery</String>
     <String>16</String>
     <String>1</String>
     <String>ByPageAndQuery</String>
@@ -58,10 +56,10 @@
     <String>ByPageAndQuery</String>
     <String>20</String>
     <String>1</String>
-    <String>ByPageAndQuery</String>
+    <String>ByPage</String>
     <String>21</String>
     <String>1</String>
-    <String>ByPageAndQuery</String>
+    <String>ByPage</String>
     <String>22</String>
     <String>1</String>
     <String>ByPage</String>
@@ -69,12 +67,6 @@
     <String>1</String>
     <String>ByPage</String>
     <String>24</String>
-    <String>1</String>
-    <String>ByPage</String>
-    <String>25</String>
-    <String>1</String>
-    <String>ByPage</String>
-    <String>26</String>
     <String>1</String>
     <String>ByPage</String>
   </FieldSrcTables>
@@ -85,8 +77,8 @@
         <Tables>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>290</Left>
-              <Top>104</Top>
+              <Left>732</Left>
+              <Top>354</Top>
               <Width>212</Width>
               <Height>64</Height>
             </Pos>
@@ -94,8 +86,8 @@
           </TableViewTableWinSaveInfo>
           <TableViewTableWinSaveInfo>
             <Pos>
-              <Left>292</Left>
-              <Top>214</Top>
+              <Left>734</Left>
+              <Top>464</Top>
               <Width>214</Width>
               <Height>82</Height>
             </Pos>
@@ -138,7 +130,7 @@
     <Mode>0</Mode>
   </TableViewData>
   <Bookmarks></Bookmarks>
-  <SavedByVersion>11.20.12742.0409</SavedByVersion>
+  <SavedByVersion>11.20.12577.0409</SavedByVersion>
   <ForceBackEndMacroExecution>false</ForceBackEndMacroExecution>
   <FieldTags>
     <ScriptBased>
@@ -180,12 +172,9 @@
           <String>$Info</String>
           <String>SiteUrl</String>
           <String>ListSitesPermissionLevel</String>
-          <String>SitepermissionLevel</String>
-          <String>Sitestatus</String>
           <String>ByCountryAndDeviceDimension_country</String>
           <String>ByCountryAndDeviceDimension_device</String>
           <String>ByPageAndQueryDimension_page</String>
-          <String>ByPageAndQueryDimension_query</String>
           <String>ByPageDimension_page</String>
         </FieldNames>
       </FieldTagData>
@@ -197,8 +186,6 @@
           <String>$Info</String>
           <String>SiteUrl</String>
           <String>ListSitesPermissionLevel</String>
-          <String>SitepermissionLevel</String>
-          <String>Sitestatus</String>
           <String>ByCountryAndDeviceDimension_country</String>
           <String>ByCountryAndDeviceDimension_device</String>
           <String>ByPageAndQueryDimension_page</String>

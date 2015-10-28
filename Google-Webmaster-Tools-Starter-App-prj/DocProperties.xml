@@ -856,7 +856,7 @@
       <int>3</int>
     </InterOrder>
   </BookmarkSortOrder>
-  <ScriptTabActiveTab>3</ScriptTabActiveTab>
+  <ScriptTabActiveTab>0</ScriptTabActiveTab>
   <ModuleSystemAccessIntended>0</ModuleSystemAccessIntended>
   <InhibitAggressiveQvdCleaning>false</InhibitAggressiveQvdCleaning>
   <Alerts></Alerts>
@@ -1264,7 +1264,12 @@
   <AllowServerObjects>true</AllowServerObjects>
   <AllowServerReports>true</AllowServerReports>
   <TxBuFont></TxBuFont>
-  <breakpointList></breakpointList>
+  <breakpointList>
+    <EditorBreakpoint>
+      <bufferName></bufferName>
+      <lineIx>51</lineIx>
+    </EditorBreakpoint>
+  </breakpointList>
   <IdleSecondsBeforeClose>0</IdleSecondsBeforeClose>
   <ElapsedSecondsBeforeClose>0</ElapsedSecondsBeforeClose>
   <AllowServerCharts>true</AllowServerCharts>
